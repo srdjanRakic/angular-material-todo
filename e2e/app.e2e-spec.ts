@@ -1,14 +1,14 @@
-import { AppPage } from './app.po';
+import { MaterialTodo } from './app.po';
 
-describe('project-name App', () => {
-  let page: AppPage;
+describe('material-todo App', function() {
+  let page: MaterialTodo;
 
   beforeEach(() => {
-    page = new AppPage();
+    page = new MaterialTodo();
   });
 
-  it('should display welcome message', () => {
+  it('Toolbar should contain "material-todo"', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getToolbarText()).toContain('material-todo');
   });
 });
